@@ -3,23 +3,23 @@ import { HighlightedText } from "./HighlightedText"
 
 const philosophyItems = [
   {
-    title: "Минимализм со смыслом",
+    title: "Только натуральное",
     description:
-      "Каждый элемент имеет свое назначение и пространство для дыхания. Мы убираем лишнее, чтобы раскрыть то, что действительно важно.",
+      "Мы используем настоящие фрукты и ягоды без искусственных красителей и усилителей вкуса. Каждая бутылка — это честный вкус природы.",
   },
   {
-    title: "Архитектурный подход",
+    title: "Рецепт с любовью",
     description:
-      "Планировки, вдохновленные структурой, ритмом и материальностью. Здания, которые говорят через пропорции и свет.",
+      "«Мурчик» создавался теми, кто обожает кошек и верит, что хорошее настроение начинается с правильного напитка. Это не просто лимонад — это забота.",
   },
   {
-    title: "Естественная динамика",
+    title: "Для всей семьи",
     description:
-      "Движение поддерживает восприятие, но никогда не отвлекает. Анимация, которая ощущается естественно, как свет, скользящий по комнате.",
+      "Мягкий вкус, умеренная сладость и никаких лишних добавок. «Мурчик» подходит детям и взрослым — всем, кто ценит простое удовольствие.",
   },
   {
-    title: "Вневременная эстетика",
-    description: "Элегантный, спокойный и долговечный визуальный язык. Дизайн, который превосходит тренды и стареет с достоинством.",
+    title: "Мурлычащее качество",
+    description: "Каждая партия проходит контроль качества. Мы следим, чтобы каждый глоток «Мурчика» был таким же вкусным, как первый.",
   },
 ]
 
@@ -51,28 +51,26 @@ export function Philosophy() {
     <section id="about" className="py-32 md:py-29">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left column - Title and image */}
           <div className="lg:sticky lg:top-32 lg:self-start">
             <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наша философия</p>
-            <h2 className="text-6xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-              Дизайн с
+            <h2 className="text-6xl md:text-6xl font-bold leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
+              Лимонад с
               <br />
-              <HighlightedText>намерением</HighlightedText>
+              <HighlightedText>душой</HighlightedText>
             </h2>
 
-            <div className="relative hidden lg:block">
+            <div className="relative hidden lg:block rounded-2xl overflow-hidden">
               <img
-                src="/images/exterior.png"
-                alt="Архитектурный эскиз рабочего пространства"
-                className="opacity-90 relative z-10 w-auto"
+                src="https://cdn.poehali.dev/projects/518c837e-5b82-4c53-90b1-6d750e49a138/files/e0fe45b4-5949-43f6-b7e5-f0186535078c.jpg"
+                alt="Мурчик лимонад — натуральные ингредиенты"
+                className="opacity-90 relative z-10 w-full object-cover"
               />
             </div>
           </div>
 
-          {/* Right column - Description and Philosophy items */}
           <div className="space-y-6 lg:pt-48">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-md mb-12">
-              Архитектура - это больше, чем конструкция. Это то, как мы воспринимаем мир. Мы создаем пространства, которые питают человеческий дух.
+              «Мурчик» — это больше, чем лимонад. Это тёплое настроение в бутылке, созданное для тех, кто умеет наслаждаться простыми радостями жизни — как кошки.
             </p>
 
             {philosophyItems.map((item, index) => (
@@ -88,9 +86,9 @@ export function Philosophy() {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="flex gap-6">
-                  <span className="text-muted-foreground/50 text-sm font-medium">0{index + 1}</span>
+                  <span className="text-[#e8521a]/50 text-sm font-bold">0{index + 1}</span>
                   <div>
-                    <h3 className="text-xl font-medium mb-3">{item.title}</h3>
+                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </div>
